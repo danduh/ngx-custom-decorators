@@ -1,0 +1,14 @@
+{
+    "name": "ngx-custom-decorators",
+    "version": "0.0.0-beta-2",
+    "peerDependencies": {
+        "@angular/common": "^7.2.0",
+        "@angular/core": "^7.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com:danduh/ngx-custom-decorators.git"
+    },
+    "author": "Daniel Ostrovsky",
+    "license": "MIT"
+}
