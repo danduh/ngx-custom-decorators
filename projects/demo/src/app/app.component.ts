@@ -3,6 +3,7 @@ import {timer} from '../../../../src/lib/method/timer';
 import {readonly} from '../../../../src/lib/method/readonly';
 import {deprecate} from '../../../../src/lib/method/deprecate';
 import {validate} from '../../../../src/lib/params/validator';
+import {debounce} from '../../../../src/lib/method/debounce';
 
 @Component({
     selector: 'app-root',
@@ -42,17 +43,17 @@ export class AppComponent {
     }
 
     summTwoNumbers(@validate('number') a, @validate('number') b) {
+        console.log(this.title);
         return a + b;
     }
 
-
+    @debounce(300)
     getSum() {
         try {
-            console.log(this.summTwoNumbers('10', 5));
+            console.log(this.summTwoNumbers(10, 5));
         } catch (e) {
             console.error(e);
         }
-
     }
 
 }
