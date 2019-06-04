@@ -10,3 +10,4 @@ export interface NGXTypedPropertyDescriptor<T> {
 export declare type NGXMethodDecorator =
     <T>(target: object, propertyKey: string | symbol, descriptor: NGXTypedPropertyDescriptor<T>) => NGXTypedPropertyDescriptor<T> | void;
 
+export declare type NGXClassPropertyDecorator = (target: object, propertyKey: string ) => void;

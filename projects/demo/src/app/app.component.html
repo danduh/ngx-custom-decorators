@@ -1,8 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
 </div>
 <h2>Method Decorators</h2>
 
@@ -12,3 +12,7 @@
 
 <h2>Params Decorators</h2>
 <button (click)="getSum()">Count two numbers</button>
+<button (click)="showDevice()">Show Device</button>
+<div *ngIf="deviceObs | async as devise">
+    {{devise | json}}
+</div>
