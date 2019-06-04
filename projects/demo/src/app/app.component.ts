@@ -76,5 +76,7 @@ export class AppComponent implements OnInit {
         });
     }
 
-
+    getKeys(obj) {
+        return Object.keys(obj);
+    }
 }

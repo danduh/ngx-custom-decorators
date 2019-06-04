@@ -6,13 +6,25 @@
 </div>
 <h2>Method Decorators</h2>
 
-<button (click)="checkTimer()">Timer</button>
-<button (click)="hackProtected()">Hack</button>
-<button (click)="deprecatedFunction()">Deprecated</button>
+<button mat-button (click)="checkTimer()">Timer</button>
+<button mat-button (click)="hackProtected()">Hack</button>
+<button mat-button (click)="deprecatedFunction()">Deprecated</button>
 
 <h2>Params Decorators</h2>
-<button (click)="getSum()">Count two numbers</button>
-<button (click)="showDevice()">Show Device</button>
-<div *ngIf="deviceObs | async as devise">
-    {{devise | json}}
+<button mat-button (click)="getSum()">Count two numbers</button>
+
+
+<h2>Device State</h2>
+<h3>Observable</h3>
+<div *ngIf="deviceObs | async as device">
+    <div *ngFor="let key of getKeys(device)">
+        {{key}} ==> {{device[key]}}
+    </div>
+</div>
+
+
+<h3>Static</h3>
+<button mat-button (click)="showDevice()">Show Device</button>
+<div *ngFor="let key of getKeys(deviceStatic)">
+    {{key}} ==> {{deviceStatic[key]}}
 </div>

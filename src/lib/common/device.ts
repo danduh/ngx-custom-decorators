@@ -1,6 +1,6 @@
 import {Breakpoints, MediaMatcher} from '@angular/cdk/layout';
 import {NGXClassPropertyDecorator} from '../core/types';
-import {combineLatest, fromEvent} from 'rxjs';
+import {combineLatest, fromEvent, Observable} from 'rxjs';
 import {map, startWith, tap,} from 'rxjs/operators';
 import {mediaInjector} from '../utils/dep-injectors';
 
@@ -34,7 +34,7 @@ export function deviceDetect(mediaQuery = '(max-width: 600px)'): NGXClassPropert
 }
 
 
-const buildBreakPointMatcher = (target, property, dynamic) => {
+const buildBreakPointMatcher = (target, property, dynamic): DeviceBPState | Observable<DeviceBPState> => {
     const breakPointMatcher = {};
     const result = {};
     const mediaMatcher = mediaInjector.get(MediaMatcher);
@@ -57,10 +57,11 @@ const buildBreakPointMatcher = (target, property, dynamic) => {
         target[property] = combineLatest(...changes)
             .pipe(
                 map((arr) => Object.assign({}, ...arr)),
-            );
+            ) as Observable<DeviceBPState>;
     } else {
-        target[property] = result;
+        target[property] = result as DeviceBPState;
     }
+    return target[property];
 };
 
 /**
