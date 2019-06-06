@@ -1,7 +1,7 @@
 import {Breakpoints, MediaMatcher} from '@angular/cdk/layout';
 import {NGXClassPropertyDecorator} from '../core/types';
 import {combineLatest, fromEvent, Observable} from 'rxjs';
-import {map, startWith, tap,} from 'rxjs/operators';
+import { debounceTime, map, startWith, tap,} from 'rxjs/operators';
 import {mediaInjector} from '../utils/dep-injectors';
 
 export interface DeviceBPState {
@@ -56,6 +56,7 @@ const buildBreakPointMatcher = (target, property, dynamic): DeviceBPState | Obse
     if (dynamic) {
         target[property] = combineLatest(...changes)
             .pipe(
+                debounceTime(0),
                 map((arr) => Object.assign({}, ...arr)),
             ) as Observable<DeviceBPState>;
     } else {
