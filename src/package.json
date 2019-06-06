@@ -1,6 +1,6 @@
 {
     "name": "ngx-custom-decorators",
-    "version": "0.0.0-beta.2",
+    "version": "0.0.0-beta-5",
     "peerDependencies": {
         "@angular/common": "^7.2.0",
         "@angular/core": "^7.2.0"
@@ -10,5 +10,18 @@
         "url": "https://github.com:danduh/ngx-custom-decorators.git"
     },
     "author": "Daniel Ostrovsky",
-    "license": "MIT"
+    "license": "MIT",
+    "keywords": [
+        "decorators",
+        "custom decorators",
+        "javascript",
+        "typescript",
+        "angular",
+        "timer",
+        "mixing",
+        "class decorators",
+        "logger",
+        "ES6",
+        "method"
+    ]
 }
