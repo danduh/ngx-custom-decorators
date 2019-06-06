@@ -2,7 +2,10 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {MatBadgeModule, MatButtonModule, MatInputModule} from '@angular/material';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import {MatToolbarModule} from '@angular/material';
 
 @NgModule({
     declarations: [
@@ -12,7 +15,8 @@ import {MatBadgeModule, MatButtonModule, MatInputModule} from '@angular/material
         BrowserModule,
         MatBadgeModule,
         MatButtonModule,
-        MatInputModule
+        MatInputModule,
+        MatToolbarModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,13 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-    <h1>
-        Welcome to {{ title }}!
-    </h1>
-</div>
+<mat-toolbar>Welcome to {{ title }}!</mat-toolbar>
+
 <h2>Method Decorators</h2>
 
-<button mat-button (click)="checkTimer()">Timer</button>
-<button mat-button (click)="hackProtected()">Hack</button>
+<button mat-flat-button color="primary"
+        (click)="checkTimer()">Timer
+</button>
+
+<button mat-button color="primary"
+        (click)="hackProtected()">Hack
+</button>
+
 <button mat-button (click)="deprecatedFunction()">Deprecated</button>
 
 <h2>Params Decorators</h2>

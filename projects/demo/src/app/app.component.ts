@@ -1,12 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {timer} from '../../../../src/lib/method/timer';
-import {readonly} from '../../../../src/lib/method/readonly';
-import {deprecate} from '../../../../src/lib/method/deprecate';
-import {tValidate, validateTypes} from '../../../../src/lib/params/validator';
-import {debounce} from '../../../../src/lib/method/debounce';
-import {deviceBP, DeviceBPState, deviceDetect} from '../../../../src/lib/common/device';
+import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
-import {MyComponent} from '../../../../src/lib/tests/component';
+import {deviceBP, DeviceBPState, deviceDetect} from '../../../../src/lib/common';
+import {debounce, deprecate, readonly, timer} from '../../../../src/lib/method';
+import {tValidate, validateTypes} from '../../../../src/lib/params';
 
 @Component({
     selector: 'app-root',
@@ -69,7 +65,6 @@ export class AppComponent implements OnInit {
     }
 
     showDevice() {
-        const myComp = new MyComponent();
         console.log(this.device);
         console.log(this.deviceStatic);
     }
