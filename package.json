@@ -1,6 +1,6 @@
 {
     "name": "ngx-custom-decorators",
-    "version": "0.0.0-beta-2",
+    "version": "0.0.0-beta-3",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -9,8 +9,8 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "set:version": "npm version",
-        "cp:readme":"cp README.md ./src",
-        "doit":"npm run cp:readme"
+        "cp:readme": "cp README.md ./src",
+        "doit": "npm run cp:readme"
     },
     "private": false,
     "dependencies": {
