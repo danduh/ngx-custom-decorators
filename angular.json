@@ -61,7 +61,8 @@
                             "projects/demo/src/styles.scss"
                         ],
                         "scripts": [],
-                        "es5BrowserSupport": true
+                        "es5BrowserSupport": true,
+                        "webWorkerTsConfig": "projects/demo/tsconfig.worker.json"
                     },
                     "configurations": {
                         "production": {
@@ -130,7 +131,8 @@
                     "options": {
                         "tsConfig": [
                             "projects/demo/tsconfig.app.json",
-                            "projects/demo/tsconfig.spec.json"
+                            "projects/demo/tsconfig.spec.json",
+                            "projects/demo/tsconfig.worker.json"
                         ],
                         "exclude": [
                             "**/node_modules/**"

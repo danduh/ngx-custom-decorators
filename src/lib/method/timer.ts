@@ -1,7 +1,6 @@
-import {NGXMethodDecorator} from '../core/types';
+import {NGXMethodDecorator} from '../core';
 
 /**
- *
  * @param log a log function if not provided, console.log() will be used;
  */
 export function timer(log?: (...args) => void): NGXMethodDecorator {
