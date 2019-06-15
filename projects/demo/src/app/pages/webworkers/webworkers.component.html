@@ -1,0 +1,7 @@
+<div>
+    <canvas id="canvas" width="300" height="300" #canvas></canvas>
+
+    <input mat-input type="text" [(ngModel)]="maxPrime" />
+    <button mat-button (click)="getAllPrimeNumber(maxPrime)">Web Worker Primes</button>
+    <button mat-button (click)="getAllPrimeNumberReg(maxPrime)">Regular Primes</button>
+</div>

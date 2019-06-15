@@ -19,34 +19,6 @@ export class AppComponent implements OnInit {
 
     @deviceBP() public deviceStatic: Observable<DeviceBPState>;
 
-    @timer(console.error)
-    checkTimer() {
-        console.log(this.title);
-    }
-
-
-    @readonly()
-    protectedFunction() {
-        return 'origin response';
-    }
-
-
-    hackProtected() {
-        try {
-            this.protectedFunction = () => {
-                return 'hacked';
-            };
-        } catch (e) {
-            console.log(e);
-        }
-        console.log(this.protectedFunction());
-    }
-
-
-    @deprecate({onInitOnly: true})
-    deprecatedFunction() {
-
-    }
 
     @validateTypes
     summTwoNumbers(@tValidate('number') a, @tValidate('number') b) {
@@ -75,7 +47,4 @@ export class AppComponent implements OnInit {
         });
     }
 
-    getKeys(obj) {
-        return Object.keys(obj);
-    }
 }

@@ -1,0 +1,11 @@
+<button mat-button
+        class="nav-toggle"
+        (click)="sideNav.toggle()">
+    TOGLE
+</button>
+<nav>
+    <a mat-button>Ngx-Custom-Decorators</a>
+    <a mat-button [routerLink]="['/generic']">Generic</a>
+    <a mat-button [routerLink]="['/ts-decors']">TypeScript</a>
+    <a mat-button [routerLink]="['/angular']">Angular</a>
+</nav>

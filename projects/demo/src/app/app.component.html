@@ -1,36 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar>Welcome to {{ title }}!</mat-toolbar>
+<app-navigator [sideNav]="sidenav"></app-navigator>
+<app-header></app-header>
 
-<h2>Method Decorators</h2>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
 
-<button mat-flat-button color="primary"
-        (click)="checkTimer()">Timer
-</button>
+        Sidenav content
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
 
-<button mat-button color="primary"
-        (click)="hackProtected()">Hack
-</button>
-
-<button mat-button (click)="deprecatedFunction()">Deprecated</button>
-
-<h2>Params Decorators</h2>
 <button mat-button (click)="getSum()">Count two numbers</button>
 
 
-<h2>Device State</h2>
-<h3>Observable</h3>
-<div *ngIf="deviceObs | async as device">
-    <div *ngFor="let key of getKeys(device)">
-        {{key}} ==> {{device[key]}}
-    </div>
-</div>
-
 
 <h3>Static</h3>
-<button mat-button (click)="showDevice()">Show Device</button>
-<div *ngFor="let key of getKeys(deviceStatic)">
-    {{key}} ==> {{deviceStatic[key]}}
-</div>
-
-<h3>Static</h3>
-<app-webworkers></app-webworkers>
+<!--<app-webworkers></app-webworkers>-->

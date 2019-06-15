@@ -1,0 +1,26 @@
+@import "../../../../styles";
+
+:host {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: mat-contrast($decor-prime, 400);
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    background: mat-color($decor-prime, 400);
+    .nav-toggle {
+
+    }
+
+    nav {
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 8px 16px;
+        color: #fff;
+    }
+}

@@ -61,8 +61,7 @@
                             "projects/demo/src/styles.scss"
                         ],
                         "scripts": [],
-                        "es5BrowserSupport": true,
-                        "webWorkerTsConfig": "projects/demo/tsconfig.worker.json"
+                        "es5BrowserSupport": true
                     },
                     "configurations": {
                         "production": {
@@ -117,7 +116,7 @@
                         "tsConfig": "projects/demo/tsconfig.spec.json",
                         "karmaConfig": "projects/demo/karma.conf.js",
                         "styles": [
-                            "projects/demo/src/styles.css"
+                            "projects/demo/src/styles.scss"
                         ],
                         "scripts": [],
                         "assets": [

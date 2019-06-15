@@ -1,8 +1,9 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {timer} from '../../../../../../src/lib/method';
-import {drawCanvas} from '../canvas/animation';
+
 import {WwThread} from '../../../../../../src/lib/ww-thread/ww-thread';
 import {Observable} from 'rxjs';
+import {drawCanvas} from '../../shared/components/canvas/animation';
 
 
 @Component({
@@ -19,13 +20,12 @@ export class WebworkersComponent implements OnInit {
 
     ngOnInit() {
         drawCanvas(this.canvas);
-
     }
 
     @timer()
     async getAllPrimeNumber(num) {
 
-        (this.primes(num) as unknown as Promise<any>)
+        (this.primesPromise(num) as unknown as Promise<any>)
             .then(console.log);
 
         (this.primesObs(num) as unknown as Observable<any>)
@@ -33,8 +33,31 @@ export class WebworkersComponent implements OnInit {
 
     }
 
-    @WwThread.promise()
+
+    getAllPrimeNumberReg(num) {
+        console.log(this.primes(num));
+    }
+
+    @timer()
     primes(num) {
+        const sieve = [];
+        const primes = [];
+        let i;
+        let j;
+
+        for (i = 2; i <= num; ++i) {
+            if (!sieve[i]) {
+                primes.push(i);
+                for (j = i << 1; j <= num; j += i) {
+                    sieve[j] = true;
+                }
+            }
+        }
+        return primes.length;
+    }
+
+    @WwThread.promise()
+    primesPromise(num) {
         const sieve = [];
         const primes = [];
         let i;
