@@ -76,10 +76,10 @@ $decor-prime: (
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $decors-primary: mat-palette($md-mcgpalette0);
-$decors-accent:  mat-palette($mat-pink, A200, A100, A400);
+$decors-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$decors-warn:    mat-palette($mat-red);
+$decors-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $decors-theme: mat-light-theme($decors-primary, $decors-accent, $decors-warn);
@@ -99,4 +99,9 @@ html, body {
     left: 0;
     right: 0;
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding-top: 52px;
+}

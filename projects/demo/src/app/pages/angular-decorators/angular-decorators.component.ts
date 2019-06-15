@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {deviceBP, DeviceBPState, deviceDetect} from '../../../../../../src/lib/common';
 import {Observable} from 'rxjs';
+import {deviceBP, DeviceBPState, matchMedia} from 'decorators/common';
 
 @Component({
     selector: 'app-angular-decorators',
@@ -8,11 +8,11 @@ import {Observable} from 'rxjs';
     styleUrls: ['./angular-decorators.component.css']
 })
 export class AngularDecoratorsComponent implements OnInit {
-    @deviceDetect() public device;
+    @matchMedia() public device;
 
     @deviceBP(true) public deviceObs: Observable<DeviceBPState>;
 
-    @deviceBP() public deviceStatic: Observable<DeviceBPState>;
+    @deviceBP() public deviceStatic: DeviceBPState;
 
     getKeys(obj) {
         return Object.keys(obj);

@@ -1,7 +1,7 @@
 import {Breakpoints, MediaMatcher} from '@angular/cdk/layout';
 import {NGXClassPropertyDecorator} from '../core/types';
 import {combineLatest, fromEvent, Observable} from 'rxjs';
-import { debounceTime, map, startWith, tap,} from 'rxjs/operators';
+import {debounceTime, map, startWith, tap} from 'rxjs/operators';
 import {mediaInjector} from '../utils/dep-injectors';
 
 export interface DeviceBPState {
@@ -25,7 +25,7 @@ export interface DeviceBPState {
 /**
  * Simple based on single media query
  */
-export function deviceDetect(mediaQuery = '(max-width: 600px)'): NGXClassPropertyDecorator {
+export function matchMedia(mediaQuery = '(max-width: 600px)'): NGXClassPropertyDecorator {
     return (target, property) => {
         const mediaMatcher = mediaInjector.get(MediaMatcher);
         const mobileQuery = mediaMatcher.matchMedia(mediaQuery);
