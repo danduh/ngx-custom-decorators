@@ -5,9 +5,10 @@ import {debounce} from 'decorators/method';
 @Component({
     selector: 'app-ts-decorators',
     templateUrl: './ts-decorators.component.html',
-    styleUrls: ['./ts-decorators.component.css']
+    styleUrls: ['./ts-decorators.component.scss']
 })
 export class TsDecoratorsComponent implements OnInit {
+    public importSyntax = 'import {tValidate, validateTypes} from \'decorators/params\';';
 
     constructor() {
     }
@@ -16,19 +17,19 @@ export class TsDecoratorsComponent implements OnInit {
     }
 
     @validateTypes
-    summTwoNumbers(@tValidate('number') a, @tValidate('number') b) {
+    sumTwoNumbers(
+        @tValidate('number') a,
+        @tValidate('number') b) {
         return a + b;
     }
-
 
     @debounce(300)
     getSum() {
         try {
-            console.log(this.summTwoNumbers(10, '5'));
+            console.log(this.sumTwoNumbers(10, '5'));
         } catch (e) {
             console.error(e);
         }
     }
-
 
 }
