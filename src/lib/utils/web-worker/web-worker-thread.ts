@@ -7,7 +7,7 @@ class JSONfn {
             if (value instanceof Function || typeof value === 'function') {
 
                 fnBody = value.toString();
-
+                console.log(fnBody);
                 if (typeof value === 'function' && value.name.length > 0) {
                     return '_ClsMtd_' + fnBody; // class method
                 }

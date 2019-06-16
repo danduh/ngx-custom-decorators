@@ -6,7 +6,6 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material';
-import {FormsModule} from '@angular/forms';
 import {GenericDecoratorsModule} from './pages/generic-decorators/generic-decorators.module';
 import {JsDecoratorsModule} from './pages/js-decorators/js-decorators.module';
 import {TsDecoratorsModule} from './pages/ts-decorators/ts-decorators.module';
@@ -22,6 +21,7 @@ import {AppRoute} from './app.route';
         AppComponent,
     ],
     imports: [
+        CoreModule,
         AppRoute,
         BrowserModule,
         MatBadgeModule,

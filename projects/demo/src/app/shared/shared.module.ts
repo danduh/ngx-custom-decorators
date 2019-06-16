@@ -4,6 +4,7 @@ import {NavigatorComponent} from './components/navigator/navigator.component';
 import {MatButtonModule, MatSidenavModule, MatTabsModule} from '@angular/material';
 import { HeaderComponent } from './components/header/header.component';
 import {RouterModule} from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -16,9 +17,11 @@ import {RouterModule} from '@angular/router';
         MatButtonModule,
         MatSidenavModule,
         MatTabsModule,
-        RouterModule
+        RouterModule,
+        FormsModule,
     ],
     imports: [
+        FormsModule,
         RouterModule,
         CommonModule,
         MatButtonModule,

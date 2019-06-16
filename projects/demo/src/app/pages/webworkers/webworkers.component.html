@@ -1,7 +1,18 @@
-<div>
-    <canvas id="canvas" width="300" height="300" #canvas></canvas>
+<mat-tab-group>
+    <mat-tab label="Overview/API">
+        <p>Web Worker Decorator </p>
+    </mat-tab>
+    <mat-tab label="Examples">
+        <div>
+            <canvas id="canvas" width="300" height="300" #canvas></canvas>
 
-    <input mat-input type="text" [(ngModel)]="maxPrime" />
-    <button mat-button (click)="getAllPrimeNumber(maxPrime)">Web Worker Primes</button>
-    <button mat-button (click)="getAllPrimeNumberReg(maxPrime)">Regular Primes</button>
-</div>
+            <input mat-input type="text" [(ngModel)]="maxPrime"/>
+            <button mat-button (click)="getAllPrimeNumber(maxPrime)">Web Worker Primes</button>
+            <button mat-button (click)="getAllPrimeNumberReg(maxPrime)">Regular Primes</button>
+        </div>
+    </mat-tab>
+</mat-tab-group>
+
+
+
+

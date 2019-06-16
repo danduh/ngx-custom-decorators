@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {timer} from '../../../../../../src/lib/method';
+import {timer} from 'decorators/method';
 
-import {WwThread} from '../../../../../../src/lib/ww-thread/ww-thread';
+import {WwThread} from 'decorators/ww-thread';
 import {Observable} from 'rxjs';
 import {drawCanvas} from '../../shared/components/canvas/animation';
 

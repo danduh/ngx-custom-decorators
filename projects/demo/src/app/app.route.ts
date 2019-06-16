@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/ts-decorators/ts-decorators.module').then(p => p.TsDecoratorsModule)
     },
     {
+        path: 'ww-decors',
+        loadChildren: () => import('./pages/webworkers/webworkers.module').then(p => p.WebworkersModule)
+    },
+    {
         path: 'angular',
         loadChildren: () => import('./pages/angular-decorators/angular-decorators.module').then(p => p.AngularDecoratorsModule)
     },
