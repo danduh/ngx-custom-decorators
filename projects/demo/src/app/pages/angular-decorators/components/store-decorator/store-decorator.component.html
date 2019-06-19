@@ -1,3 +1,20 @@
-<p>
-  store-decorator works!
-</p>
+<h2>Store Component Decorator</h2>
+<div class="container">
+    <div class="example-results">
+        <pre>
+            {{snippet2}}
+        </pre>
+        <div *ngFor="let movie of allMovies$ | async">
+            <app-movie-card [movie]="movie"></app-movie-card>
+        </div>
+    </div>
+
+    <div class="example-results">
+        <pre>
+            {{snippet1}}
+        </pre>
+        <div *ngFor="let movie of allMoviesDecor$ | async">
+            <app-movie-card [movie]="movie"></app-movie-card>
+        </div>
+    </div>
+</div>

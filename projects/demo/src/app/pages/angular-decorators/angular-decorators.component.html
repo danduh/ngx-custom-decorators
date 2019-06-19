@@ -4,6 +4,8 @@
     </mat-tab>
     <mat-tab label="Examples">
         <div class="tab-content-viewer">
+            <app-store-decorator></app-store-decorator>
+
             <h2>Device State</h2>
             <h3>Observable</h3>
             <div *ngIf="deviceObs | async as device">
