@@ -16,15 +16,15 @@ For better understanding of concept please read following articles:
     * Vue.Js
 
 
-|                           |    JavaScript    |     TypeScript   | Angular | VueJs | React |
-|:-------------------------:|:----------------:|:----------------:|:----------------:|-----------------|:-----------------:|
+|                           |    JavaScript    |     TypeScript   |    Angular       |       VueJs      |     React        |
+|:-------------------------:|:----------------:|:----------------:|:----------------:|------------------|:----------------:|
 |   @timer()                |:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |  @debounce()              |:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 | @deprecate()              |:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 | @readonly()               |:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-| @@WwThread.asObservable() |:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-| @@WwThread.toPromise()    |:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-| @@WwThread.toPromise()    |:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|  @WwThread.asObservable() |:white_check_mark:|:white_check_mark:|:white_check_mark:| :no_entry_sign:  |  :no_entry_sign: |
+|  @WwThread.toPromise()    |:white_check_mark:|:white_check_mark:|:white_check_mark:| :no_entry_sign:  |  :no_entry_sign: |
+|  @WwThread.toPromise()    |:white_check_mark:|:white_check_mark:|:white_check_mark:| :no_entry_sign:  |  :no_entry_sign: |
 
 
 ## Get It
