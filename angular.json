@@ -64,6 +64,32 @@
                         "es5BrowserSupport": true
                     },
                     "configurations": {
+                        "ghpg": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/demo/src/environments/environment.ts",
+                                    "with": "projects/demo/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "baseHref": "https://danduh.github.io/ngx-custom-decorators/",
+                            "outputPath": "docs",
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "aot": true,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                }
+                            ]
+                        },
                         "production": {
                             "fileReplacements": [
                                 {
