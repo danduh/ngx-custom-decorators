@@ -1,12 +1,23 @@
-<button mat-button
-        class="nav-toggle"
-        (click)="sideNav.toggle()">
-    TOGLE
-</button>
-<nav>
-    <a mat-button>Ngx-Custom-Decorators</a>
-    <a mat-button [routerLink]="['/generic']">Generic</a>
-    <a mat-button [routerLink]="['/ts-decors']">TypeScript</a>
-    <a mat-button [routerLink]="['/angular']">Angular</a>
-    <a mat-button [routerLink]="['/ww-decors']">WebWorkers</a>
-</nav>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-button
+                class="nav-toggle"
+                (click)="sideNav.toggle()">
+            TOGLE
+        </button>
+        <nav>
+            <a mat-button>Ngx-Custom-Decorators</a>
+            <a mat-button [routerLink]="['/generic']">Generic</a>
+            <a mat-button [routerLink]="['/ts-decors']">TypeScript</a>
+            <a mat-button [routerLink]="['/angular']">Angular</a>
+            <a mat-button [routerLink]="['/ww-decors']">WebWorkers</a>
+        </nav>
+        <span class="row-spacer"></span>
+        <a href="https://github.com/danduh/ngx-custom-decorators" target="_blank" aria-label="Fork Me on GitHub">
+            <mat-icon svgIcon="github-icon" color="white"></mat-icon>
+        </a>
+        <a href="https://twitter.com/danduh81" target="_blank" aria-label="Follow Me on Twitter">
+            <mat-icon svgIcon="twitter-icon"></mat-icon>
+        </a>
+    </mat-toolbar-row>
+</mat-toolbar>

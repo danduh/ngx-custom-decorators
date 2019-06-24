@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NavigatorComponent} from './components/navigator/navigator.component';
-import {MatButtonModule, MatCardModule, MatSidenavModule, MatTabsModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule, MatSidenavModule, MatTabsModule, MatToolbarModule} from '@angular/material';
 import {HeaderComponent} from './components/header/header.component';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
@@ -12,6 +12,8 @@ const MATERIAL_MODULES = [
     MatSidenavModule,
     MatTabsModule,
     MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
 ];
 
 const APP_COMPONENTS = [
