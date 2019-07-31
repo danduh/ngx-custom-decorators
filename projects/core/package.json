@@ -1,0 +1,24 @@
+{
+    "name": "@decors/core",
+    "version": "0.0.0-beta-5",
+    "peerDependencies": {
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danduh/ngx-custom-decorators.git"
+    },
+    "author": "Daniel Ostrovsky",
+    "license": "MIT",
+    "description": "*Betta version not yet ready for production use.*",
+    "bugs": {
+        "url": "https://github.com/danduh/ngx-custom-decorators/issues"
+    },
+    "homepage": "https://github.com/danduh/ngx-custom-decorators#readme",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "keywords": [
+        "deorators"
+    ]
+}
