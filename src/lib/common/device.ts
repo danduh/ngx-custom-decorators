@@ -19,6 +19,7 @@ export interface DeviceBPState {
     HandsetLandscape: boolean;
     TabletLandscape: boolean;
     WebLandscape: boolean;
+    update?: () => void;
 }
 
 
@@ -39,8 +40,20 @@ const buildBreakPointMatcher = (target, property, dynamic): DeviceBPState | Obse
     const result = {};
     const mediaMatcher = mediaInjector.get(MediaMatcher);
 
+    Object.defineProperty(result, 'update', {
+        enumerable: false,
+        writable: false,
+        value: () => {
+            for (const key of Reflect.ownKeys(Breakpoints)) {
+                breakPointMatcher[Breakpoints[key]] = mediaMatcher.matchMedia(Breakpoints[key]);
+                result[key] = breakPointMatcher[Breakpoints[key]].matches;
+            }
+        }
+    });
+
     const changes = [];
     for (const key of Reflect.ownKeys(Breakpoints)) {
+        // console.log(key)
         breakPointMatcher[Breakpoints[key]] = mediaMatcher.matchMedia(Breakpoints[key]);
         result[key] = breakPointMatcher[Breakpoints[key]].matches;
         changes.push(
@@ -50,7 +63,6 @@ const buildBreakPointMatcher = (target, property, dynamic): DeviceBPState | Obse
                     startWith(false),
                     map(() => ({[key]: breakPointMatcher[Breakpoints[key]].matches}))
                 ));
-
     }
 
     if (dynamic) {
@@ -61,17 +73,19 @@ const buildBreakPointMatcher = (target, property, dynamic): DeviceBPState | Obse
             ) as Observable<DeviceBPState>;
     } else {
         target[property] = result as DeviceBPState;
+
     }
+    console.log(target[property].configurable);
     return target[property];
 };
 
 /**
- * based on breake points
+ * based on break points
  * @param dynamic {boolean} default = false, if true will return Observable<DeviceBPState>
  */
 export function deviceBP(dynamic = false): NGXClassPropertyDecorator {
     return (target, property) => {
-        return buildBreakPointMatcher(target, property, dynamic);
+        target[property] = buildBreakPointMatcher(target, property, dynamic);
     };
 }
 

@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {AppEffects} from './effects/app.effects';
 import {reducers} from './reducers';
+import { DeviceDecoratorComponent } from './components/device-decorator/device-decorator.component';
 
 const routes: Routes = [
     {
@@ -22,6 +23,7 @@ export const AngularRoutes: ModuleWithProviders = RouterModule.forChild(routes);
     declarations: [
         AngularDecoratorsComponent,
         StoreDecoratorComponent,
+        DeviceDecoratorComponent,
     ],
     imports: [
         CommonModule,

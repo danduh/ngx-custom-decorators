@@ -8,25 +8,10 @@ import {deviceBP, DeviceBPState, matchMedia} from 'decorators/common';
     styleUrls: ['./angular-decorators.component.css']
 })
 export class AngularDecoratorsComponent implements OnInit {
-    @matchMedia() public device;
-
-    @deviceBP(true) public deviceObs: Observable<DeviceBPState>;
-
-    @deviceBP() public deviceStatic: DeviceBPState;
-
-    getKeys(obj) {
-        return Object.keys(obj);
-    }
 
     constructor() {
     }
 
     ngOnInit() {
     }
-
-    showDevice() {
-        console.log(this.device);
-        console.log(this.deviceStatic);
-    }
-
 }

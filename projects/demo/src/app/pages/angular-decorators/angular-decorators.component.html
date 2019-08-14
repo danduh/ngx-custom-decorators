@@ -2,24 +2,14 @@
     <mat-tab label="Overview/API">
         <p>Decorators that uses Angular modules </p>
     </mat-tab>
-    <mat-tab label="Examples">
+    <mat-tab label="Store Decorators">
         <div class="tab-content-viewer">
             <app-store-decorator></app-store-decorator>
-
-            <h2>Device State</h2>
-            <h3>Observable</h3>
-            <div *ngIf="deviceObs | async as device">
-                <div *ngFor="let key of getKeys(device)">
-                    {{key}} ==> {{device[key]}}
-                </div>
-            </div>
-
-
-            <h3>Static</h3>
-            <button mat-button (click)="showDevice()">Show Device</button>
-            <div *ngFor="let key of getKeys(deviceStatic)">
-                {{key}} ==> {{deviceStatic[key]}}
-            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Device Decorators">
+        <div class="tab-content-viewer">
+            <app-device-decorator></app-device-decorator>
         </div>
     </mat-tab>
 </mat-tab-group>
