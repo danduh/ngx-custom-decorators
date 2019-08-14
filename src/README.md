@@ -77,4 +77,3 @@ File structure:
 `projects/demo/` demo app for use, test and examples
 
 `ng serve demo` will run demo app .
-

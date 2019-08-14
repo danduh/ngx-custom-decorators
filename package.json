@@ -12,7 +12,7 @@
     "cp:readme": "cp README.md ./src",
     "doit": "npm run cp:readme",
     "git404": "cp docs/index.html docs/404.html",
-    "build:git": "ng build --prod --output-path docs --base-href https://danduh.github.io/ngx-custom-decorators/",
+    "build:git": "ng build demo --prod --outputPath=docs --baseHref='https://danduh.github.io/ngx-custom-decorators/'",
     "docs:git": "npm run build:git && npm run git404"
   },
   "private": false,
