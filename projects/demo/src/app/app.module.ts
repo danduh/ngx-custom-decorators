@@ -14,12 +14,13 @@ import {SharedModule} from './shared/shared.module';
 import {CoreModule} from './core/core.module';
 import {RouterModule} from '@angular/router';
 import {AppRoute} from './app.route';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
-import { EffectsModule } from '@ngrx/effects';
+import {StoreModule} from '@ngrx/store';
+import {reducers, metaReducers} from './reducers';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment';
+import {EffectsModule} from '@ngrx/effects';
 import {HttpClientModule} from '@angular/common/http';
+import {HomeModule} from "./pages/home/home.module";
 
 @NgModule({
     declarations: [
@@ -38,16 +39,15 @@ import {HttpClientModule} from '@angular/common/http';
         GenericDecoratorsModule,
         JsDecoratorsModule,
         TsDecoratorsModule,
+        HomeModule,
         WebworkersModule,
         SharedModule,
         RouterModule,
-        StoreModule.forRoot(reducers, { metaReducers }),
+        StoreModule.forRoot(reducers, {metaReducers}),
         !environment.production ? StoreDevtoolsModule.instrument() : [],
         EffectsModule.forRoot([]),
     ],
-    exports: [
-
-    ],
+    exports: [],
     providers: [],
     bootstrap: [
         AppComponent
